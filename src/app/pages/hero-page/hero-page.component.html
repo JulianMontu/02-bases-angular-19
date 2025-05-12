@@ -1,0 +1,29 @@
+<div class="container p-20">
+
+
+    <h1>{{ name() }}</h1>
+
+    <dl>
+        <td>Nombre:</td>
+        <dd>{{ name() | uppercase}}</dd>
+
+        <td>Edad:</td>
+        <dd>{{ age() }}</dd>
+
+        <td>Método:</td>
+        <dd>{{ heroDescription() }}</dd>
+
+        <td>Capitalizado:</td>
+        <dd>{{ name().toUpperCase() }}</dd>
+        <!-- ! Intentar  -->
+        <!-- <dd> {{ 'Mostrar nombre TODO EN MAYÚSCULAS' }} </dd> -->
+    </dl>
+
+    <button (click)="changeHero()" class="btn btn-primary mx-2">
+        Cambiar nombre
+    </button>
+
+    <button class="btn btn-primary" (click)="chageAge()">Cambiar edad</button>
+
+    <button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
+</div>

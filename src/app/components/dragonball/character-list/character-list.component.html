@@ -1,0 +1,27 @@
+<h3>{{listTitle()}}</h3>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Poder</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (character of characters(); track character.id) { @if
+                (character.power > 500) {
+                <tr>
+                    <td>{{ character.id }}</td>
+                    <td>{{ character.name }}</td>
+                    <td [class.text-danger]="character.power > 9000" [class.text-primary]="character.power < 9000">
+                        <strong>{{ character.power }}</strong>
+                    </td>
+                </tr>
+                }@else {
+                <tr>
+                    <td></td>
+                    <td><strong>aqui no hay nadie</strong></td>
+                </tr>
+                } }
+            </tbody>
+        </table>
